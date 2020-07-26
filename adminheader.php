@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" type="text/css" href="css\style.css">
-	<link rel="icon" type="image" href="images\logo.png">
+	<link rel="icon" type="image/png" href="images/logo.png">
 	<div class="topnav" id="myTopnav">
 	  <a href="javascript:void(0)"><b>INDUCE</b></a>
 	  <a class="w3-right" href="javascript:void(0)">Contact</a>

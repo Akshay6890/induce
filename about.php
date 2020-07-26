@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+	<title>ABOUT INDUCE</title>
 	<?php 
 		include 'header.php';
 	?>

@@ -8,19 +8,33 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" type="text/css" href="css\style.css">
-	<link rel="icon" type="image" href="images\logo.png">
+	<link rel="icon" type="image/png" href="images/logo.png">
 	<div class="topnav" id="myTopnav">
 	  <a href="index.php"><b>INDUCE</b></a>
 	  <a class="w3-right" href="#contact_details">Contact</a>
 	  <a class="w3-right" href="about.php">About</a>
 	  <?php 
 		date_default_timezone_set("Asia/Kolkata");
+		error_reporting(E_ERROR | E_PARSE);
 		$con = mysqli_connect("localhost","root","","induce");
 		$art="SELECT * FROM articles ORDER BY sno DESC LIMIT 1";
 		$check=mysqli_query($con,$art);
 		$res=mysqli_fetch_array($check);
 	  ?>
-	  <a class="w3-right" href="article.php?artid=<?php echo $res['sno'];?>">Articles</a>
+	<?php
+		if($res==TRUE)
+		{
+			?>
+			<a class="w3-right" href="article.php?artid=<?php echo $res['sno'];?>">Articles</a>
+			<?php
+		}
+		else
+		{
+			?>
+			<a class="w3-right" href="article.php?<?php echo 'NO ARTICLES FOUND';?>">Articles</a>
+			<?php
+		}
+	?>
 	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		<i class="fa fa-bars"></i>
 	  </a>
